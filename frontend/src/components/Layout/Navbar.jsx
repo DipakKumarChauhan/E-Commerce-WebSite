@@ -37,19 +37,19 @@ const Navbar = () => {
 
         { /*Center Link*/}
         <div className='hidden md:flex space-x-6'>
-          <Link to="men" className='text-gray-600 hover:text-black-800 text-sm font-medium uppercase'>
+          <Link to="/collections/all" className='text-gray-600 hover:text-black-800 text-sm font-medium uppercase'>
             Men
           </Link>
 
-          <Link to="women" className='text-gray-600 hover:text-black-800 text-sm font-medium uppercase'>
+          <Link to="/collections/all" className='text-gray-600 hover:text-black-800 text-sm font-medium uppercase'>
             Women
           </Link>
 
-          <Link to="topwear" className='text-gray-600 hover:text-black-800 text-sm font-medium uppercase'>
+          <Link to="/collections/all" className='text-gray-600 hover:text-black-800 text-sm font-medium uppercase'>
             TopWear
           </Link>
 
-          <Link to="bottomwar" className='text-gray-600 hover:text-black-800 text-sm font-medium uppercase'>
+          <Link to="/collections/all" className='text-gray-600 hover:text-black-800 text-sm font-medium uppercase'>
             Bottom-Wear
           </Link>
         </div>  
@@ -57,7 +57,7 @@ const Navbar = () => {
         {/*Right Links*/} 
 
         <div className='flex items-center space-x-4'>
-          <Link to = '/profile' className=' hover:text-black' >
+          <Link to = '/login' className=' hover:text-black' >
             <HiOutlineUser className='h-6 w-6 text-gray-700'/>
 
           </Link>  

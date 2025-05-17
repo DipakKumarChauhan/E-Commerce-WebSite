@@ -1,9 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import featured from '../../assets/featured.webp'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { useRef } from 'react'
 
-const FeaturedCollections = () => {
+const FeaturedCollection = () => {
   return (
     <section className='py-16 px-4 lg:px-0'>
-        <div className='conatainer mx-auto flex flex-col-reverse lg:flex-row items-center bg-green-50 rounded-3xl'>
+        <div className='container mx-auto flex flex-col-reverse lg:flex-row items-center bg-green-50 rounded-3xl'>
         {/* Lest Section */}
         <div className='lg:w-1/2 p-8 text-center lg:text-left'>
         <h2 className='text-lg font-semibold text-gray-700 mb-2'>
@@ -21,10 +26,14 @@ const FeaturedCollections = () => {
         </h2>
         </div>
         {/* Right Content */}
-        
+        <div className= "lg:w-1/2">
+        <img src = {featured} alt = "Featured Collection" 
+        className =  " w-full h-full object-cover lg:rounded-tr-3xl lg:rounded"/>
+            
+        </div>
         </div>
     </section>
   )
 }
 
-export default FeaturedCollections
+export default FeaturedCollection
