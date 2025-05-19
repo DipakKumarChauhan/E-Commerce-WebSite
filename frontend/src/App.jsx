@@ -7,6 +7,9 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import CollectionsPage from './pages/CollectionsPage';
+import Checkout from './components/Cart/Checkout.jsx'
+import OrderConfirmationPage from './pages/OrderConfirmationPage.jsx';
+import OrderDetailsPage from './pages/OrderDetailsPage.jsx';
 // Dummy components for pages
 //  const Home = ()  => <div></div>;
 const Men = () => <div>Men Page</div>;
@@ -26,6 +29,11 @@ const App = () => {
         <Route path="register" element={<Register/>} /> 
         <Route path="profile" element={<Profile/>} />
         <Route path="collections/:collection" element={<CollectionsPage />} /> 
+        {/* <Route path="product/:id" element={<ProductDetails />} /> */}
+        <Route path = "checkout" element={<Checkout />} />
+        <Route path = "order-confirmation" element= {<OrderConfirmationPage/>} />
+        <Route path ="order/:id" element= {<OrderDetailsPage/>} />
+
         <Route path="men" element={<Men />} />
         <Route path="women" element={<Women />} />
         <Route path="topwear" element={<Topwear />} />

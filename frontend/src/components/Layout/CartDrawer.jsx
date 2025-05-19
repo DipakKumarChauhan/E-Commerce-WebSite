@@ -1,8 +1,16 @@
 import React from 'react'
 import { IoMdClose } from 'react-icons/io'
 import CartContent from '../Cart/CartContent';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+
 const CartDrawer = ({isOpen , toggleCartDrawer}) => {
 
+  const navigate = useNavigate();
+  const handleCheckout = () => {
+    toggleCartDrawer();
+    navigate('/checkout');
+  }
 
 
 
@@ -31,7 +39,7 @@ const CartDrawer = ({isOpen , toggleCartDrawer}) => {
 
         {/* checkout Button */}
         <div className="p-4">
-          <button className="w-full bg-rabbit-red text-white py-2 rounded-md hover:bg-rabbit-red-dark transition duration-200">
+          <button onClick={handleCheckout} className="w-full bg-rabbit-red text-white py-2 rounded-md hover:bg-rabbit-red-dark transition duration-200">
             Checkout
           </button>
           <p className= "text-sm text-gray-500 mt-2 text-center">
