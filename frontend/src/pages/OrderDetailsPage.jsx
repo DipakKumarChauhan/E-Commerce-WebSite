@@ -1,6 +1,7 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import {useState, useEffect} from 'react'
 
 const OrderDetailsPage = () => {
     const {id} = useParams();
@@ -125,6 +126,10 @@ const OrderDetailsPage = () => {
                     </table>
 
                 </div>
+                {/* Back To My Orders Link */}
+                <Link to ="/my-orders" className='text-blue-500 hover:underline'>
+                Back To My Orders
+                </Link>
 
         </div>)}
     </div>

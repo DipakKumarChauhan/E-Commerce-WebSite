@@ -10,6 +10,13 @@ import CollectionsPage from './pages/CollectionsPage';
 import Checkout from './components/Cart/Checkout.jsx'
 import OrderConfirmationPage from './pages/OrderConfirmationPage.jsx';
 import OrderDetailsPage from './pages/OrderDetailsPage.jsx';
+import MyOrderPage from './pages/MyOrderPage.jsx';
+import AdminLayout from './components/Admin/AdminLayout.jsx';
+import AdminHomePage from './pages/AdminHomePage.jsx';
+import UserManagement from './components/Admin/UserManagement.jsx';
+import Productmanagement from './components/Admin/Productmanagement.jsx';
+import EditProductPage from './components/Admin/EditProductPage.jsx';
+import OrderManagement from './components/Admin/OrderManagement.jsx';
 // Dummy components for pages
 //  const Home = ()  => <div></div>;
 const Men = () => <div>Men Page</div>;
@@ -33,6 +40,8 @@ const App = () => {
         <Route path = "checkout" element={<Checkout />} />
         <Route path = "order-confirmation" element= {<OrderConfirmationPage/>} />
         <Route path ="order/:id" element= {<OrderDetailsPage/>} />
+        <Route path= "/my-orders" element = {<MyOrderPage/>}/>
+        
 
         <Route path="men" element={<Men />} />
         <Route path="women" element={<Women />} />
@@ -41,6 +50,14 @@ const App = () => {
         
         {/* Add this route for product details */}
         <Route path="product/:id" element={<ProductDetails />} />
+      </Route>
+      <Route path= "/admin" element= {<AdminLayout/>}> 
+        <Route index element = {<AdminHomePage/>}/>
+        <Route path= "users" element ={<UserManagement/> }/>
+        <Route path ="products" element = {<Productmanagement/>}/>
+        <Route path ="products/:id/edit" element = {<EditProductPage/>}/>
+        <Route path = "orders" element = {<OrderManagement/>}/>
+
       </Route>
     </Routes>
     </>
